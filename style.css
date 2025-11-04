@@ -1,0 +1,83 @@
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #status {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            grid-template-rows: repeat(3, 120px);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .cell {
+            background-color: white;
+            border: 3px solid #333;
+            font-size: 48px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .cell:hover {
+            background-color: #e8e8e8;
+        }
+
+        .cell.taken {
+            cursor: not-allowed;
+        }
+
+        .cell.taken:hover {
+            background-color: white;
+        }
+
+        #resetBtn {
+            padding: 15px 40px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #resetBtn:hover {
+            background-color: #45a049;
+        }
+
+        .win {
+            background-color: #90EE90 !important;
+        }
+
+        .cell.O::before {
+            content: 'O';
+            color: #2196F3;
+        }
+
+        .cell.X::before {
+            content: 'X';
+            color: #f44336;
+        }
